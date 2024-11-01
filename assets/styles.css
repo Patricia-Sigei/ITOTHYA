@@ -1,6 +1,8 @@
 body {
     background-color: #fff; 
     color: #333; 
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 
@@ -11,25 +13,36 @@ h1{
     font-size: 20px;
     text-align: left;
 }
-#logo {
-    text-align: center;
-    padding: 20px;
-}
-
-.logo {
-    height: 80px;
-    width: auto;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 10px 10px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ccc;
+    height: auto;
+}
+#name{
+    margin-right: 10px;
 }
 
+#logo {
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
 
 #number, #time {
     flex: 1;
@@ -38,22 +51,17 @@ header {
     justify-content: center;
 }
 
-.slogan {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #666;
-}
-
 #time {
     display: flex;
-    margin-left: auto;
+    align-items: center;
     gap: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #333;
+    margin-left: auto;
 }
 
 #time i {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #0073e6;
 }
 
@@ -128,44 +136,70 @@ header {
 }
 
 #welcome-container {
-    height: 60vh; /* Full viewport height */
     display: flex;
-    align-items: left; /* Center vertically */
-    justify-content: left; /* Center horizontally */
-    background-color: #FFD580; /* Light orange background */
-    padding: 20px; /* Padding around the content */
-    text-align: center; /* Center text alignment */
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: #fff;
+    background-color: #ffae42;
+    background-image: url("https://files.oaiusercontent.com/file-hUupLAEcAViF2Mxz4aFtsFSr?se=2024-11-01T23%3A20%3A23Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D7762fa0c-c968-48f5-9ad9-cb35519c4455.webp&sig=5JP7bdft0EHPqJpB0mk08tvOXNLdnxCNqDCVh6Ggjr0%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 50px;
 }
 
-.welcome-text {
-    max-width: 600px; 
-    padding: 20px; 
-    background-color: #FFD580; /
-    
+.welcome-content {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    line-height: 1.5;
 }
 
-h2 {
-    color: blue; 
-    font-size: 36px; 
-    margin-bottom: 20px; 
+.welcome-content h1 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:black;
 }
 
-p {
-    font-size: 16px; 
-    margin: 10px 0; 
+.welcome-content p {
+    font-size: 20px;
+    padding: 10px 0;
+    color: black;
+    font-weight: bold;
 }
 
-q {
-    display: block; 
-    font-size: 24px; 
-    margin-top: 20px; 
-    color: #333; 
-    font-style: italic; 
+.welcome-content q {
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    margin: 10px 0;
+    color: black;
+    font-weight: bold;
 }
 
+.main-btn {
+    font-size: 20px;
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-btn:hover {
+    background-color: #ff9900;
+}
 
 
 .services {
+    height: 60vh;
     display: flex;
     flex-wrap: wrap;
 }
