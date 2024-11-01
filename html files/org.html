@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Structure</title>
+    <style>
+        /* CSS Styles */
+
+        body {
+            font-family: Arial, sans-serif; 
+            background-color: #f0f0f0; 
+            margin: 0; 
+            padding: 20px;
+        }
+
+        #organization {
+            padding: 20px; 
+            background-color: #fff; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #organization h2 {
+            color: rgb(156, 156, 240); 
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        #organization ul {
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        #organization li {
+            margin: 10px 0;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #organization li::before {
+            content: ''; 
+            position: absolute; 
+            left: -15px; 
+            top: 0; 
+            bottom: 0;
+            border-left: 2px solid rgb(156, 156, 240);
+        }
+
+        #organization li:last-child::before {
+            height: 0; 
+        }
+
+        #organization ul ul {
+            display: none; 
+            margin-left: 20px;
+            padding-left: 15px; 
+        }
+
+        #organization ul ul li::before {
+            height: auto; 
+        }
+
+        .expandable {
+            font-weight: bold;
+        }
+
+        .expanded {
+            color: rgb(156, 156, 240); 
+        }
+    </style>
+</head>
+<body>
+    <section id="logo">
+        <img src="images/Itothyalogo.png" alt="Company Logo" class="logo">
+    </section>
+    <div id="name">
+        <h1>Itothya General Agencies LTD</h1>
+        <p class="slogan">You Can Trust Us</p>
+    </div>
+    <section id="organization">
+        <h2>Organizational Structure</h2>
+        <ul>
+            <li class="expandable">CEO
+                <ul>
+                    <li class="expandable">General Manager
+                        <ul>
+                            <li class="expandable">Company Accountant
+                                <ul>
+                                    <li>Debt Collector</li>
+                                </ul>
+                            </li>
+                            <li class="expandable">Company Administrator
+                                <ul>
+                                    <li class="expandable">Support Staff
+                                        <ul>
+                                            <li class="expandable">Office Wellness
+                                                <ul>
+                                                    <li>Tea Girl</li>
+                                                    <li>Cleaners</li>
+                                                </ul>
+                                            </li>
+                                            <li class="expandable">Logistics
+                                                <ul>
+                                                    <li>Drivers</li>
+                                                    <li>Courier</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="expandable">Marketing Executive
+                                <ul>
+                                    <li>Office Secretary</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        // JavaScript for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const expandableItems = document.querySelectorAll('.expandable');
+
+            expandableItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    // Prevent click from propagating to parent elements
+                    event.stopPropagation();
+
+                    const subList = this.querySelector('ul');
+                    if (subList) {
+                        subList.style.display = subList.style.display === 'none' || !subList.style.display ? 'block' : 'none'; // Toggle visibility
+                        this.classList.toggle('expanded'); // Toggle expanded class for styling
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

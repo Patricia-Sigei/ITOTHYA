@@ -1,0 +1,373 @@
+bbody {
+    background-color: #E6E6FA; 
+    color: #333; 
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0056b3; 
+}
+h1{
+    font-size: 20px;
+    text-align: left;
+}
+#logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+
+#number, #time {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+#time {
+    display: flex;
+    margin-left: auto;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#time i {
+    font-size: 1.2rem;
+    color: #0073e6;
+}
+
+.navbar {
+    background-color: #0056b3;
+    padding: 10px 20px;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    color: #ffcc00;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(156, 113, 156);
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    white-space: nowrap;
+}
+
+.dropdown-link {
+    display: block;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.dropdown-link:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 10px;
+    }
+}
+
+.services {
+    
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+
+
+.debt-title {
+    color: #002147;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.debt-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px; 
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.section h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #ffae42;
+    padding-bottom: 5px;
+}
+
+.debt-description,
+.debt-classifications {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+.debt-types,
+.debt-classification-list {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #555;
+}
+
+.debt-types li,
+.debt-classification-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.debt-types li i,
+.debt-classification-list li i {
+    position: absolute;
+    left: 0;
+    color: #ffae42;
+}
+
+
+.other-services-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.offer-heading {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: colorChange 5s infinite;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards, colorChange 5s infinite 0.5s;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: blue;
+    }
+    25% {
+        background-color: darkblue;
+    }
+    50% {
+        background-color: lightblue;
+    }
+    75% {
+        background-color: blue;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.offer-heading:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: #FFD580;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+    position: relative;
+    text-align: center;
+}
+
+.card h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.card:hover {
+    transform: rotate(-3deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+.contact-payment-prompt .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #fff;
+    /* background-color: #FFD580; */
+}
+
+.column {
+    flex: 1;
+    background-color: #fff;
+    /* padding: 20px; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    max-width: 100%;
+}
+
+
+.column p, .column ul {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.column ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+    .contact-payment-prompt .container {
+        flex-direction: column;
+    }
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+}
+footer {
+    background-color: #ffae42;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ff9900;
+}

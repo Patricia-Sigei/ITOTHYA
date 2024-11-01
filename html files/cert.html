@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification</title>
+    <style>
+        /* Basic Reset */
+        body, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Font for the body */
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text color */
+            line-height: 1.6; /* Better line spacing */
+            padding: 20px; /* Padding around the body */
+        }
+
+        h2 {
+            color: #0056b3; /* Blue color for h2 */
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        h3 {
+            color: #007bff; /* Lighter blue for h3 */
+            margin-top: 20px; /* Space above the heading */
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        p {
+            margin-bottom: 20px; /* Space below paragraphs */
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 5px; 
+            margin: 10px 0; 
+            cursor: pointer; 
+            transition: transform 0.2s; 
+        }
+
+        img:hover {
+            transform: scale(1.05); 
+        }
+
+       
+        @media (min-width: 600px) {
+            img {
+                width: 45%; 
+                margin: 1%; 
+                float: left; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Legal Certification</h2>
+    <p>We are fully certified and compliant with all Kenyan regulatory requirements. Additionally, we carry comprehensive insurance and are well-prepared to handle any situation that may arise, ensuring that we serve you effectively and efficiently.</p>
+    <h3>Check out the Certifications</h3>
+    
+    <img src="images/certificate of incorporation.png" alt="Certificate of incorporation" onclick="showAlert('Certificate of Incorporation')">
+    <img src="images/certificate of Registration.png" alt="Certificate of Registration" onclick="showAlert('Certificate of Registration')">
+    <img src="images/company compliance cert.png" alt="Company Tax Compliance Certificate" onclick="showAlert('Company Tax Compliance Certificate')">
+    <img src="images/indv compliance cert.png" alt="Director Tax Compliance Certificate" onclick="showAlert('Director Tax Compliance Certificate')">
+    <img src="images/pin certificate.png" alt="Pin Certificate" onclick="showAlert('Pin Certificate')">
+    <img src="images/policy schedule.png" alt="Policy Schedule" onclick="showAlert('Policy Schedule')">
+    <img src="images/professional indemnity policy.png" alt="Indemnity Policy" onclick="showAlert('Indemnity Policy')">
+
+    <script>
+        function showAlert(certName) {
+            alert('You clicked on: ' + certName);
+        }
+    </script>
+</body>
+</html>
