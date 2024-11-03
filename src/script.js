@@ -98,3 +98,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', toggleBackToTopButton);
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const partnerButton = document.querySelector('.main-btn');
+
+    if (partnerButton) {
+        partnerButton.addEventListener('click', function() {
+            window.location.href = "html files/login.html"; 
+        });
+    }
+});
