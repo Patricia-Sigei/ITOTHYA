@@ -37,13 +37,6 @@ header {
     width: auto;
 }
 
-.slogan {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 5px;
-}
-
 #number, #time {
     flex: 1;
     display: flex;
