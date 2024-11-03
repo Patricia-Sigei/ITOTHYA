@@ -321,6 +321,7 @@ header {
     margin: 20px; 
 }
 
+
 .card {
     background-color: #FFD580;
     border: 1px solid #fff;
@@ -330,6 +331,11 @@ header {
     transition: transform 0.2s;
     position: relative;
     text-align: center;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);   
 }
 
 .card h3 {
@@ -338,7 +344,7 @@ header {
 }
 #card-head {
   
-    font-size: 20px;
+    font-size: 25px;
     font-style: italic;
     font-weight: bold;
  
