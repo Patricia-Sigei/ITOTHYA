@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-   
+    // Dropdown toggle functionality
     const dropdownToggle = document.querySelector('.navbar .dropdown-toggle');
     const dropdownMenu = document.querySelector('.navbar .dropdown-menu');
 
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Search form functionality
     const searchForm = document.querySelector('.form-inline');
     const searchInput = document.querySelector('.nav_search-btn');
 
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Contact form functionality
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -49,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Payment functionality
     const paymentButton = document.querySelector('#payment button');
     if (paymentButton) {
         paymentButton.addEventListener('click', function() {
@@ -67,5 +70,31 @@ document.addEventListener('DOMContentLoaded', function() {
         payNowBtn.addEventListener('click', function() {
             alert('Thank you for choosing to pay now! Redirecting you to the payment page...');
         });
+    }
+
+    // Back to top arrow functionality
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Show/hide back-to-top button on scroll
+    function toggleBackToTopButton() {
+        if (window.scrollY > 100) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    }
+
+    // Scroll to top when back-to-top button is clicked
+    if (backToTopButton) {
+        backToTopButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Listen for scroll events to toggle the button's visibility
+        window.addEventListener('scroll', toggleBackToTopButton);
     }
 });
