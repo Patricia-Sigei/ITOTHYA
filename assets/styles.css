@@ -257,8 +257,8 @@ header {
 .debt-types li i,
 .debt-classification-list li i {
     color: #ffae42;
-    margin-right: 10px; /* Adjusted margin for spacing */
-    font-size: 20px; /* Increased icon size for visibility */
+    margin-right: 10px; 
+    font-size: 20px; 
 }
 
 
@@ -323,8 +323,8 @@ header {
 
 
 .card {
-    background-color: #FFD580;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -335,8 +335,10 @@ header {
 }
 
 .card:hover {
-    transform: scale(1.05);   
+    transform: scale(1.05); 
+    background-color: #ffae42; 
 }
+
 
 .card h3 {
     color: #0056b3;
@@ -360,10 +362,10 @@ header {
     padding-left: 20px;
 }
 
-.card:hover {
+/* .card:hover {
     transform: rotate(-3deg);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
 @media (max-width: 768px) {
     .card {
